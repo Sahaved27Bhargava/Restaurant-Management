@@ -1,0 +1,43 @@
+[  
+    {  
+        "name":"Tara maa",
+        "cuisine":"North Indian Resturant",
+        "id":1,
+        "contact":9655694838,
+        "img":"https://lh5.googleusercontent.com/p/AF1QipOzh-3aP4g3kiD7USI5_FhvLsSsZAtVYUf37oYh=w408-h306-k-no",
+        "lnk":"taramaa.html"
+    },
+    {  
+        "name":"Tom's Diner",
+        "cuisine":"Italian",
+        "id":2,
+        "contact":9884717070,
+        "img":"https://content.jdmagicbox.com/comp/vellore/s2/9999px416.x416.150302162933.u8s2/catalogue/toms-diner-vellore-restaurants-wdczti7tjb.jpg",
+        "lnk":"tomdiner.html"
+    },
+    {  
+        "name":"Rongo Multi Cuisine",
+        "cuisine":"Multi Cuisine",
+        "id":3,
+        "contact":7094481816,
+        "img":"https://lh5.googleusercontent.com/p/AF1QipPL6PXLC-tMH3DYZaBaJlTdEvLbqDtcVDByFy9D=w408-h306-k-no",
+        "lnk":"rongo.html"
+    },
+    {  
+        "name":" Vellore Kitchen",
+        "cuisine":"Non Vegetarian",
+        "id":4,
+        "contact":8489923330,
+        "img":"https://media-cdn.tripadvisor.com/media/photo-s/09/65/74/7c/the-vellore-kitchen.jpg",
+        "lnk":"vellorekitchen.html"
+    },
+    {  
+        "name":"Barbeque Nation",
+        "cuisine":"Barbeque",
+        "id":5,
+        "contact":8069028748,
+        "img":"https://d23ynomj6u3eig.cloudfront.net/sites/default/files/2019-12/52.%20gallery%20857x491_36.jpg",
+        "lnk":"BBQvellore.html"
+    }
+    
+]

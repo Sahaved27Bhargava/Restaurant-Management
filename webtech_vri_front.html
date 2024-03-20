@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" href=" ">    <!--Title icon should be placed here-->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--search button-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootswatch@4.5.2/dist/solar/bootstrap.min.css" integrity="sha384-NCwXci5f5ZqlDw+m7FwZSAwboa0svoPPylIW3Nf+GBDsyVum+yArYnaFLE9UDzLd" crossorigin="anonymous">
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+      
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Anybody:wght@300&display=swap');
+        
+        html {
+            height:100%;
+        }
+        
+        
+        .bg {
+            animation:slide 3s ease-in-out infinite alternate;
+            background-image: linear-gradient(-60deg, #3A98B9 50%, #FFF1DC 50%);
+            bottom:0;
+            left:-50%;
+            opacity:.5;
+            position:fixed;
+            right:-50%;
+            top:0;
+            z-index:-1;
+        }
+        
+        .bg2 {
+            animation-direction:alternate-reverse;
+            animation-duration:4s;
+        }
+        
+        .bg3 {
+            animation-duration:5s;
+        }
+        .card{
+            transition: all 0.3s;
+        }
+        .card:hover{
+            transform: scale(1.05);
+        }
+        .card-body{
+            background-color: #F9F5EB;
+        }
+        body{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            color: #1F1D42;
+            background-color: #F0F8E1;
+            font-family: 'Montserrat', sans-serif;
+        }
+        img{
+            border-radius: 20px;
+            width: 100%;
+            
+        }
+        @keyframes slide {
+        0% {
+        transform:translateX(-25%);
+        }   100% {
+        transform:translateX(25%);
+        }
+        }
+        .btn{
+            background: linear-gradient(to bottom right, #3A98B9, #FFF1DC);
+            border: 0;
+            border-radius: 12px;
+            color: #FFFFFF;
+            cursor: pointer;
+            display: inline-block;
+            font-family: -apple-system,system-ui,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 2.5;
+            outline: transparent;
+            padding: 0 1rem;
+            text-align: center;
+            text-decoration: none;
+            transition: box-shadow .2s ease-in-out;
+            user-select: none;
+            -webkit-user-select: none;
+            touch-action: manipulation;
+            white-space: nowrap;
+            }
+
+            .btn:not([disabled]):focus {
+            box-shadow: 0 0 .25rem rgba(0, 0, 0, 0.5), -.125rem -.125rem 1rem rgba(239, 71, 101, 0.5), .125rem .125rem 1rem rgba(255, 154, 90, 0.5);
+            }
+
+            .btn:not([disabled]):hover {
+            box-shadow: 0 0 .25rem rgba(0, 0, 0, 0.5), -.125rem -.125rem 1rem rgba(239, 71, 101, 0.5), .125rem .125rem 1rem rgba(255, 154, 90, 0.5);
+            }
+
+        
+    </style>
+      <title>Restaurants List</title>
+      
+</head>
+<body ng-app="myapp">
+    <div class="bg"></div>
+    <div class="bg bg2"></div>
+    <div class="bg bg3"></div>
+    
+    <div class="container nt-4">
+        <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #3A98B9;">
+            <a class="navbar-brand" href="#">Restaurant List</a>
+        </nav>
+    </div>
+    <div class="container nt-4">
+        <div class="row">
+            <div class="col-md-4 offset-md-4">
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="basic-addon1">
+                            <i class="material-icons">search</i>
+                        </span>
+                    </div>
+                    <input type="text" class="form-control" placeholder="Enter resturant name" ng-model="Rname">
+                </div> 
+            </div>   
+        </div>
+    </div>
+
+    <div class="container mt-4" ng-controller="Resctrl">
+        <div class="card-columns">
+            <div class="card" ng-repeat="restu in restu | filter: Rname">
+                <div class="card-body">
+                    <img class="card-img-top" ng-src="{{restu.img}}" width="100%" height="213px" frameborder="0" style="border:0;">
+                    <h3 class="card-title">{{restu.name}}</h3>
+                    <p class="card-text">{{restu.cuisine}}</p>
+                    <p class="small">{{restu.contact}}</p>
+                    <p id="map" class="card-img-bottom"></p>
+                    <a href="{{restu.lnk}}" class="card-link"><button class="btn">Details here</button></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="webpg_webtech.js"></script>
+</body>
+</html>
+
+
+

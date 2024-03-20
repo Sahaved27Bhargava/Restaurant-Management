@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Order out</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Anybody:wght@300&family=Montserrat:wght@500&family=Poppins:wght@300&display=swap');
+    body{
+      font-family: 'Poppins', sans-serif;
+      font-size: 15px;
+    }
+    /* Remove the navbar's default margin-bottom and rounded borders */ 
+    .navbar {
+      margin-bottom: 0;
+      border-radius: 0;
+    }
+    
+    /* Add a gray background color and some padding to the footer */
+    footer {
+      background-color: #f2f2f2;
+      padding: 25px;
+    }
+    
+  .carousel-inner img {
+      width: 100%; /* Set width to 100% */
+      margin: auto;
+      min-height:200px;
+      max-height: 690px;
+  }
+
+  /* Hide the carousel text when the screen is less than 600 pixels wide */
+  @media (max-width: 600px) {
+    .carousel-caption {
+      display: none; 
+    }
+  }
+  #btn{
+    background-color: rgba(0,0,0,0.5);
+    border: 0.75px solid black;
+    border-radius: 25px;
+    padding: 5px 20px;
+    color: rgb(251, 230, 191);
+  }
+  #btn:hover{
+    background-color: rgba(0,0,0,0.4);
+  }
+  .well{
+    background-color: #3A98B9;
+    font-weight: bold;
+  }
+  </style>
+</head>
+<body>
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#">Logo</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Projects</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="loginwebtech.php"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner" role="listbox">
+      <div class="item active">
+        <img src="pexels-ash-376464.jpg" alt="Image">
+        <div class="carousel-caption">
+          <h1 style="font-family:Verdana, Geneva, Tahoma, sans-serif;">Order out</h1>
+          <p>Enjoy your favourite delights on one click.</p>
+        </div>      
+      </div>
+
+      <div class="item">
+        <img src="pexels-chan-walrus-958545.jpg" alt="Image">
+        <div class="carousel-caption">
+            <h1 style="font-family:Verdana, Geneva, Tahoma, sans-serif;">Order out</h1>
+          <p>Choose your own cuisine and dish.</p>
+        </div>      
+      </div>
+    </div>
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+</div>
+  
+<div class="container text-center">    
+  <br>
+  <div class="row">
+    <div class="col-sm-4">
+      <div style="background-image: url(brown.jpg); width: 100%; height: 100%; padding: 20px 30px 30px 30px;">
+        <h2>About our website: </h2>
+        <p>You can view several cuisines and restaurents available close to you
+            and lets you pick your moody food.
+        </p>
+        <br>
+        <!--a href="food.html"><button id="btn">Get Ordering </button></a-->
+        <br><br>
+        <a href="webtech_vri_front.html"><button id="btn">Book resturant </button></a>
+      </div>
+    </div>
+    <div class="col-sm-4"> 
+      <img src="pexels-rajesh-tp-1633525.jpg" class="img-responsive" style="width:100%" alt="Image">
+         
+    </div>
+    <div class="col-sm-4">
+      <div class="well">
+       <p>Your culinary adventure awaits!!</p>
+      </div>
+      <div class="well">
+       <p>Select among the various options to enjoy a delicacy provided in differnet countries around the world!</p><br>
+       <p>From Fresh green vegetables to chessy tacos and pizzas to your homeland's best and most popular dishes.</p>
+      </div>
+    </div>
+  </div>
+</div><br>
+
+<footer class="container-fluid text-center">
+  <p>@ 2023 BIT CORPORATION OF VELLORE</p><br>
+  <p>Built using MEAN Stack. All rights reserved</p>
+</footer>
+
+</body>
+</html>

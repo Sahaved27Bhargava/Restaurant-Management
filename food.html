@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Restaurant Management System</title>
+  <!-- Load Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <script type="text/javascript">
+    function goToNewPage()
+    {
+        var url = document.getElementById('list').value;
+        if(url != 'none') {
+            window.location = url;
+        }
+    }
+</script>
+<style>
+.bg {
+    animation:slide 3s ease-in-out infinite alternate;
+    background-image: linear-gradient(-60deg, #3A98B9 50%, #FFF1DC 50%);
+    bottom:0;
+    left:-50%;
+    opacity:.5;
+    position:fixed;
+    right:-50%;
+    top:0;
+    z-index:-1;
+}
+
+.bg2 {
+    animation-direction:alternate-reverse;
+    animation-duration:4s;
+}
+
+.bg3 {
+    animation-duration:5s;
+}
+@keyframes slide {
+0% {
+transform:translateX(-25%);
+}   100% {
+transform:translateX(25%);
+}
+}
+</style>
+</head>
+<body>
+  <div class="bg"></div>
+  <div class="bg bg2"></div>
+  <div class="bg bg3"></div>
+
+  <div class="container">
+    <h1>Restaurant Management System</h1>
+    <form action="#" method="get">
+      <div class="form-group">
+        <br>
+        <label for="dish">Select a dish from the following items:</label>
+        <br><br>
+        <select name="list" id="list" accesskey="target">
+          <option value="none" selected>Choose a food item!</option>
+          <option value="italian2.html">Margherita Pizza</option>
+          <option value="indian2.html">Chana Masala</option>
+          <option value="mexican2.html">Fajitas</option>
+
+          <option value="italian2.html">Osso Buco</option>
+          <option value="indian2.html">Palak Paneer</option>
+          <option value="mexican2.html">Tamale</option>
+
+          <option value="italian2.html">Tiramisu</option>
+          <option value="indian2.html">Gulab Jamun</option>
+          <option value="mexican2.html">Tacos al pastor</option>
+
+          <option value="italian2.html">Cannoli</option>
+          <option value="indian2.html">Ras Malai</option>
+          <option value="mexican2.html">Guacamole</option>
+        </select>
+        <input type=button value="Go" onclick="goToNewPage()" class="btn btn-primary" />
+        
+      </div>
+      
+    </form>
+  </div>
+  <!-- Load Bootstrap JS -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</body>
+</html>
